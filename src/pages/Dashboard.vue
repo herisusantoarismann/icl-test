@@ -204,55 +204,51 @@
     >
       <div class="flex gap-12 xl:gap-24">
         <div class="basis-4/5 xl:basis-2/3 grid grid-cols-5">
-          <div class="flex flex-col gap-8">
-            <p class="xl:text-lg font-medium">About</p>
-            <div class="flex flex-col gap-2 text-sm">
-              <p class="underline">About FLOU Cloud</p>
-              <p class="underline">Pricing Model</p>
-              <p class="underline">Product</p>
-              <p class="underline">Solutions</p>
-              <p class="underline">Customer</p>
-              <p class="underline">Partners</p>
-              <p class="underline">Latest Update</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-8">
-            <p class="text-lg font-medium">Promotion</p>
-            <div class="flex flex-col gap-2 text-sm">
-              <p class="underline">Free Trial</p>
-              <p class="underline">Refer a friend</p>
-              <p class="underline">Starter Package</p>
-              <p class="underline">Web Hosting</p>
-              <p class="underline">Affiliate Program</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-8">
-            <p class="text-lg font-medium">Explore</p>
-            <div class="flex flex-col gap-2 text-sm">
-              <p class="underline">Indonesia Gateway</p>
-              <p class="underline">Getting Started</p>
-              <p class="underline">Blog</p>
-              <p class="underline">Marketplace</p>
-              <p class="underline">Availability Zone</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-8">
-            <p class="text-lg font-medium">Support</p>
-            <div class="flex flex-col gap-2 text-sm">
-              <p class="underline">Contact Sales</p>
-              <p class="underline">After-sales Support</p>
-              <p class="underline">Pricing Calculator</p>
-              <p class="underline">FAQ</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-8">
-            <p class="text-lg font-medium">Resource</p>
-            <div class="flex flex-col gap-2 text-sm">
-              <p class="underline">Document Center</p>
-              <p class="underline">Security & Compliance</p>
-              <p class="underline">Press Room</p>
-            </div>
-          </div>
+          <LinkGroup
+            title="About"
+            :links="[
+              'About FLOU Cloud',
+              'Pricing Model',
+              'Product',
+              'Solutions',
+              'Customer',
+              'Partners',
+              'Latest Update',
+            ]"
+          />
+          <LinkGroup
+            title="Promotion"
+            :links="[
+              'Free Trial',
+              'Refer a friend',
+              'Starter Package',
+              'Web Hosting',
+              'Affiliate Program',
+            ]"
+          />
+          <LinkGroup
+            title="Explore"
+            :links="[
+              'Indonesia Gateway',
+              'Getting Started',
+              'Blog',
+              'Marketplace',
+              'Availability Zone',
+            ]"
+          />
+          <LinkGroup
+            title="Support"
+            :links="[
+              'Contact Sales',
+              'After-sales Support',
+              'Pricing Calculator',
+              'FAQ',
+            ]"
+          />
+          <LinkGroup
+            title="Resource"
+            :links="['Document Center', 'Security & Compliance', 'Press Room']"
+          />
         </div>
         <div
           class="basis-1/5 xl:basis-1/3 xl:px-32 flex flex-col font-medium text-center items-center gap-4"
@@ -280,10 +276,11 @@
 import Button from '../components/Button.vue';
 import Icon from '../components/Icon.vue';
 import Dropdown from '../components/Dropdown.vue';
+import LinkGroup from '../components/LinkGroup.vue';
 
 export default {
   name: 'DashboardPage',
-  components: { Button, Icon, Dropdown },
+  components: { Button, Icon, Dropdown, LinkGroup },
 };
 </script>
 
