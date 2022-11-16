@@ -17,7 +17,12 @@
       <div class="text-center pt-1 pb-1">
         <Button text="Register" :block="true" @click="register()" />
       </div>
-      <p class="mt-4 text-sm text-center">Have an account? Login here.</p>
+      <p class="mt-4 text-sm text-center">
+        Have an account?
+        <router-link to="/login" class="underline text-[#4BB543]"
+          >Login here.</router-link
+        >
+      </p>
     </div>
   </div>
 </template>

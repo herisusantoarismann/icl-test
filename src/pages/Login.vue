@@ -13,7 +13,10 @@
         <Button text="Login" :block="true" @click="login()" />
       </div>
       <p class="mt-4 text-sm text-center">
-        Don`t have an account? Register here.
+        Don`t have an account?
+        <router-link to="/register" class="underline text-[#4BB543]"
+          >Register here.</router-link
+        >
       </p>
     </div>
   </div>
