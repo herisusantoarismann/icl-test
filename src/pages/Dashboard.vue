@@ -29,50 +29,14 @@
           class="px-16 xl:px-52 py-6 mx-0.5 flex justify-between bg-[#033d2e]"
         >
           <div class="flex gap-6 xl:gap-8">
-            <div class="flex items-center gap-2 xl:gap-3">
-              <p class="text-sm text-[#4BB543]">Why FLOU</p>
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Products</p>
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Solution</p>
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Partners</p>
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Pricing</p>
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Resources</p>
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Support</p>
-            </div>
-            <div class="flex items-center gap-3">
-              <p class="text-sm">Marketplace</p>
-            </div>
+            <Dropdown :options="['Why FLOU', 'B']" :isActive="true" />
+            <Dropdown :options="['Products', 'B']" />
+            <Dropdown :options="['Solutions', 'B']" />
+            <Dropdown :options="['Partners', 'B']" />
+            <Dropdown :options="['Pricing', 'B']" />
+            <Dropdown :options="['Resources']" />
+            <Dropdown :options="['Support']" />
+            <Dropdown :options="['Marketplace']" />
           </div>
           <Button text="Let's Get Started" size="medium" />
         </div>
@@ -315,10 +279,11 @@
 <script>
 import Button from '../components/Button.vue';
 import Icon from '../components/Icon.vue';
+import Dropdown from '../components/Dropdown.vue';
 
 export default {
   name: 'DashboardPage',
-  components: { Button, Icon },
+  components: { Button, Icon, Dropdown },
 };
 </script>
 
