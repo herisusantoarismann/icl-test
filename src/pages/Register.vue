@@ -6,27 +6,51 @@
       <img class="mx-auto w-48" src="../assets/logo.png" alt="logo" />
       <h4 class="text-xl font-semibold mt-1 pb-1">Register</h4>
     </div>
-    <form>
-      <Input title="Email" type="email" />
-      <Input title="Password" type="password" />
-      <Input title="Password Confirmation" type="password" />
+    <div>
+      <Input title="Email" type="email" v-model:modelValue="email" />
+      <Input title="Password" type="password" v-model:modelValue="password" />
+      <Input
+        title="Password Confirmation"
+        type="password"
+        v-model:modelValue="confpassword"
+      />
       <div class="text-center pt-1 pb-1">
-        <Button text="Register" :block="true" />
+        <Button text="Register" :block="true" @click="register()" />
       </div>
       <p class="mt-4 text-sm text-center">Have an account? Login here.</p>
-    </form>
+    </div>
   </div>
 </template>
 
 <script>
 import Input from '../components/Input.vue';
 import Button from '../components/Button.vue';
+import axios from 'axios';
 
 export default {
   name: 'RegisterPage',
   components: {
     Input,
     Button,
+  },
+  data() {
+    return {
+      email: '',
+      password: '',
+      confpassword: '',
+    };
+  },
+  methods: {
+    async register() {
+      console.log(this.email, this.password, this.confpassword);
+
+      const formData = new FormData();
+      formData.append('email', this.email);
+      formData.append('password', this.password);
+      formData.append('confpassword', this.confpassword);
+
+      await axios.post('http://interview.pluginesia.com/register', formData);
+    },
   },
 };
 </script>

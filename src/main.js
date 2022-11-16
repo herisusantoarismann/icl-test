@@ -15,6 +15,7 @@ import {
   faTwitter,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
+import store from './vuex/store';
 
 library.add(
   faMagnifyingGlass,
@@ -28,5 +29,6 @@ library.add(
 
 createApp(App)
   .use(router)
+  .use(store)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount('#app');

@@ -14,6 +14,9 @@ import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 import BannerSection from '../components/BannerSection.vue';
 import ProductSection from '../components/ProductSection.vue';
+import axios from 'axios';
+import { useStore } from 'vuex';
+import { onMounted } from '@vue/runtime-core';
 
 export default {
   name: 'DashboardPage',
@@ -22,6 +25,22 @@ export default {
     Footer,
     BannerSection,
     ProductSection,
+  },
+  setup() {
+    const store = useStore();
+
+    // cors error
+    const getData = async () => {
+      return await axios.get('http://interview.pluginesia.com/jsonTest', {
+        headers: {
+          Authorization: `Bearer ${store.state.token}`,
+        },
+      });
+    };
+
+    onMounted(() => {
+      getData();
+    });
   },
 };
 </script>

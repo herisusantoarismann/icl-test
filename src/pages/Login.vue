@@ -22,6 +22,8 @@
 <script>
 import Input from '../components/Input.vue';
 import Button from '../components/Button.vue';
+import axios from 'axios';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'LoginPage',
@@ -33,8 +35,25 @@ export default {
     };
   },
   methods: {
-    login() {
-      console.log(this.email, this.password);
+    ...mapMutations(['setToken']),
+    async login() {
+      const formData = new FormData();
+      formData.append('email', this.email);
+      formData.append('password', this.password);
+
+      const { data } = await axios.post(
+        'http://interview.pluginesia.com/login',
+        formData
+      );
+      this.setToken(data);
+      this.$router.push('/');
+      // Error cors
+      // await fetch('http://interview.pluginesia.com/me', {
+      //   method: 'GET',
+      //   headers: {
+      //     Authorization: `Bearer ${data}`,
+      //   },
+      // }).catch((err) => console.log(err));
     },
   },
 };
