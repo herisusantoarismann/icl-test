@@ -74,10 +74,11 @@
 <script>
 import LinkGroup from '../components/LinkGroup.vue';
 import Icon from '../components/Icon.vue';
+import Button from '../components/Button.vue';
 
 export default {
   name: 'FooterComponent',
-  components: { LinkGroup, Icon },
+  components: { LinkGroup, Icon, Button },
 };
 </script>
 
