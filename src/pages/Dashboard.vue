@@ -264,9 +264,9 @@
         </div>
       </div>
       <div class="flex gap-4">
-        <p>Bahasa</p>
+        <p class="cursor-pointer hover:text-[#4BB543]">Bahasa</p>
         <span class="border-l-2 border-white"></span>
-        <p>English</p>
+        <p class="cursor-pointer hover:text-[#4BB543]">English</p>
       </div>
     </footer>
   </div>
