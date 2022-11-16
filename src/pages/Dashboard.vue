@@ -7,10 +7,7 @@
         >
           <img src="../assets/logo.png" alt="logo" class="w-12" />
           <div class="flex items-center gap-4">
-            <font-awesome-icon
-              icon="fa-solid fa-magnifying-glass"
-              class="text-xs text-[#4BB543] bg-white p-2 rounded-full"
-            />
+            <Icon icon="fa-solid fa-magnifying-glass" />
             <Button
               text="Contact Us"
               size="small"
@@ -299,22 +296,10 @@
           <Button text="Sign in console" size="medium" :block="true" />
           <p>Our Social Media</p>
           <div class="space-x-3 xl:space-x-4">
-            <font-awesome-icon
-              icon="fa-brands fa-instagram"
-              class="p-2 text-lg text-black bg-white rounded-full"
-            />
-            <font-awesome-icon
-              icon="fa-brands fa-facebook-f"
-              class="py-2 px-3 text-black bg-white rounded-full"
-            />
-            <font-awesome-icon
-              icon="fa-brands fa-twitter"
-              class="p-2 text-lg text-black bg-white rounded-full"
-            />
-            <font-awesome-icon
-              icon="fa-brands fa-linkedin"
-              class="p-2 text-lg text-black bg-white rounded-full"
-            />
+            <Icon icon="fa-brands fa-instagram" />
+            <Icon icon="fa-brands fa-facebook-f" />
+            <Icon icon="fa-brands fa-twitter" />
+            <Icon icon="fa-brands fa-linkedin" />
           </div>
         </div>
       </div>
@@ -329,10 +314,11 @@
 
 <script>
 import Button from '../components/Button.vue';
+import Icon from '../components/Icon.vue';
 
 export default {
   name: 'DashboardPage',
-  components: { Button },
+  components: { Button, Icon },
 };
 </script>
 
