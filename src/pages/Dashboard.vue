@@ -11,23 +11,21 @@
               icon="fa-solid fa-magnifying-glass"
               class="text-xs text-[#4BB543] bg-white p-2 rounded-full"
             />
-            <button
-              class="py-1 px-3 text-sm flex items-center gap-2 border border-white rounded-md"
-            >
-              <font-awesome-icon icon="fa-regular fa-envelope" /> Contact Us
-            </button>
-            <button
-              class="py-1 px-3 flex items-center text-sm gap-2 border border-white rounded-md"
-            >
-              English
-              <font-awesome-icon
-                icon="fa-solid fa-caret-down"
-                class="text-xs"
-              />
-            </button>
-            <button class="py-1 px-4 text-sm text-white bg-[#4BB543] rounded">
-              Login
-            </button>
+            <Button
+              text="Contact Us"
+              size="small"
+              variant="outline"
+              icon="fa-regular fa-envelope"
+              iconStart="start"
+            />
+            <Button
+              text="English"
+              size="small"
+              variant="outline"
+              icon="fa-solid fa-caret-down"
+              iconStart="end"
+            />
+            <Button text="Login" size="small" />
           </div>
         </div>
         <div
@@ -79,9 +77,7 @@
               <p class="text-sm">Marketplace</p>
             </div>
           </div>
-          <button class="py-1.5 px-3 text-sm text-white bg-[#4BB543] rounded">
-            Let's Get Started
-          </button>
+          <Button text="Let's Get Started" size="medium" />
         </div>
       </header>
       <section
@@ -100,12 +96,8 @@
             Data processing capabilities for users around the world.
           </p>
           <div class="flex gap-8">
-            <button class="py-3 px-4 text-sm text-white bg-[#4BB543] rounded">
-              Get Started for Free
-            </button>
-            <button class="py-3 px-4 text-sm text-[#4BB543] bg-white rounded">
-              Contact Sales
-            </button>
+            <Button text="Get Started for Free" size="large" />
+            <Button text="Contact Sales" variant="light" size="large" />
           </div>
         </div>
       </section>
@@ -304,11 +296,7 @@
         <div
           class="basis-1/5 xl:basis-1/3 xl:px-32 flex flex-col font-medium text-center items-center gap-4"
         >
-          <button
-            class="w-full py-2 px-5 text-sm xl:text-base bg-[#4BB543] rounded-lg"
-          >
-            Sign in console
-          </button>
+          <Button text="Sign in console" size="medium" :block="true" />
           <p>Our Social Media</p>
           <div class="space-x-3 xl:space-x-4">
             <font-awesome-icon
@@ -340,8 +328,11 @@
 </template>
 
 <script>
+import Button from '../components/Button.vue';
+
 export default {
   name: 'DashboardPage',
+  components: { Button },
 };
 </script>
 
