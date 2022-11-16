@@ -3,7 +3,7 @@
     class="relative mx-0.5 px-16 xl:px-52 py-20 xl:py-40 flex overflow-hidden"
   >
     <img
-      src="../assets/planning.jpg"
+      src="https://res.cloudinary.com/heri-cloudnary/image/upload/v1668576684/planning_ue4w9y.jpg"
       alt="bg-banner"
       class="absolute right-0 top-0"
     />
