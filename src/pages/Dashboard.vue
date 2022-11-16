@@ -101,101 +101,60 @@
             </p>
           </div>
           <div class="mt-12 flex gap-16">
-            <div class="flex-1 flex flex-col gap-2">
-              <h4 class="font-medium text-[#4BB543] text-lg">FLOU Cloud</h4>
-              <hr />
-              <div class="my-4 flex flex-col gap-12">
-                <div class="flex items-center">
-                  <img src="../assets/logo.png" alt="" class="w-16" />
-                  <div class="flex flex-col gap-2">
-                    <p class="text-lg text-[#4BB543]">FLOU Compute</p>
-                    <p class="text-sm">
-                      Elastic Compute Service, Compute High Performance, Auto
-                      Scaling, Container
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <img src="../assets/logo.png" alt="" class="w-16" />
-                  <div class="flex flex-col gap-2">
-                    <p class="text-lg text-[#4BB543]">FLOU Network</p>
-                    <p class="text-sm">Elastic IP, Server Load Balancer</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <img src="../assets/logo.png" alt="" class="w-16" />
-                  <div class="flex flex-col gap-2">
-                    <p class="text-lg text-[#4BB543]">FLOU Security</p>
-                    <p class="text-sm">
-                      Anti DDoS, Web Application Firewall WAF, Server Guard
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <img src="../assets/logo.png" alt="" class="w-16" />
-                  <div class="flex flex-col gap-2">
-                    <p class="text-lg text-[#4BB543]">FLOU Storage</p>
-                    <p class="text-sm">Object Storage Service, Block Storage</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProductDetail
+              title="FLOU Cloud"
+              :products="[
+                {
+                  name: 'FLOU Compute',
+                  description:
+                    'Elastic Compute Service, Compute High Performance, Auto Scaling, Container',
+                },
+                {
+                  name: 'FLOU Network',
+                  description: 'Elastic IP, Server Load Balancer',
+                },
+                {
+                  name: 'FLOU Security',
+                  description:
+                    'Anti DDoS, Web Application Firewall WAF, Server Guard',
+                },
+                {
+                  name: 'FLOU Storage',
+                  description: 'Object Storage Service, Block Storage',
+                },
+              ]"
+            />
             <div class="flex-1 flex flex-col gap-8">
-              <div class="flex flex-col gap-2">
-                <h4 class="text-lg text-[#4BB543] font-medium">Telkom Cloud</h4>
-                <hr />
-                <div class="my-4 flex flex-col gap-12">
-                  <div class="flex items-center">
-                    <img src="../assets/logo.png" alt="" class="w-16" />
-                    <div class="flex flex-col gap-2">
-                      <p class="text-lg text-[#4BB543]">Telkom Cloud Compute</p>
-                      <p class="text-xs">
-                        Virtual server service with CPU and RAM resources
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img src="../assets/logo.png" alt="" class="w-16" />
-                    <div class="flex flex-col gap-2">
-                      <p class="text-lg text-[#4BB543]">Telkom Cloud Network</p>
-                      <p class="text-xs">
-                        Public or Private Cloud infrastructure support service
-                        that enable communication
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col gap-2">
-                <h4 class="text-lg text-[#4BB543] font-medium">
-                  Backup Service
-                </h4>
-                <hr />
-                <div class="my-4 flex flex-col gap-12">
-                  <div class="flex items-center">
-                    <img src="../assets/logo.png" alt="" class="w-16" />
-                    <div class="flex flex-col gap-2">
-                      <p class="text-lg text-[#4BB543]">
-                        Cloud BackUp Service Veem
-                      </p>
-                      <p class="text-xs">
-                        Object Storage Service (OSS) is an encrypted object
-                        storage service
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <img src="../assets/logo.png" alt="" class="w-16" />
-                    <div class="flex flex-col gap-2">
-                      <p class="text-lg text-[#4BB543]">Cloud BackUp HBR</p>
-                      <p class="text-xs">
-                        Object Storage Service (OSS) is an encrypted object
-                        storage service
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ProductDetail
+                title="Telkom Cloud"
+                :products="[
+                  {
+                    name: 'Telkom Cloud Compute',
+                    description:
+                      ' Virtual server service with CPU and RAM resources',
+                  },
+                  {
+                    name: 'Telkom Cloud Network',
+                    description:
+                      'Public or Private Cloud infrastructure support service that enable communication',
+                  },
+                ]"
+              />
+              <ProductDetail
+                title="Backup Service"
+                :products="[
+                  {
+                    name: 'Cloud BackUp Service Veem',
+                    description:
+                      'Object Storage Service (OSS) is an encrypted object storage service',
+                  },
+                  {
+                    name: 'Cloud BackUp HBR',
+                    description:
+                      'Object Storage Service (OSS) is an encrypted object storage service',
+                  },
+                ]"
+              />
             </div>
           </div>
         </div>
@@ -280,10 +239,11 @@ import Icon from '../components/Icon.vue';
 import Dropdown from '../components/Dropdown.vue';
 import LinkGroup from '../components/LinkGroup.vue';
 import ProductList from '../components/ProductList.vue';
+import ProductDetail from '../components/ProductDetail.vue';
 
 export default {
   name: 'DashboardPage',
-  components: { Button, Icon, Dropdown, LinkGroup, ProductList },
+  components: { Button, Icon, Dropdown, LinkGroup, ProductList, ProductDetail },
 };
 </script>
 
