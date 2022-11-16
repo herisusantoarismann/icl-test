@@ -64,17 +64,17 @@
       </section>
       <section class="pt-8 pb-48 px-12 xl:px-48 flex">
         <div class="basis-1/3">
-          <h4 class="text-[#4BB543] text-lg font-medium">Flou Cloud Product</h4>
-          <ul class="mt-6 flex flex-col gap-2 border-l border-gray-400">
-            <li class="my-1 pl-6 text-[#4BB543] border-l-2 border-green-600">
-              Infrastructure as a Service
-            </li>
-            <li class="my-1 pl-6">Software as a Service</li>
-            <li class="my-1 pl-6">Platform as a Service</li>
-            <li class="my-1 pl-6">Hybrid Multicloud</li>
-            <li class="my-1 pl-6">Services</li>
-            <li class="my-1 pl-6">Private Cloud</li>
-          </ul>
+          <ProductList
+            title="Flou Cloud Product"
+            :products="[
+              'Infrastructure as a Service',
+              'Software as a Service',
+              'Platform as a Service',
+              'Hybrid Multicloud',
+              'Services',
+              'Private Cloud',
+            ]"
+          />
         </div>
         <div class="basis-2/3 flex flex-col gap-4">
           <div class="relative">
@@ -90,7 +90,9 @@
           </div>
           <hr />
           <div class="flex flex-col gap-1">
-            <p class="text-lg underline text-[#4BB543] font-medium">
+            <p
+              class="text-lg underline text-[#4BB543] font-medium cursor-pointer"
+            >
               Explore Infrastructure as a Service Products (IaaS)
             </p>
             <p c>
@@ -277,10 +279,11 @@ import Button from '../components/Button.vue';
 import Icon from '../components/Icon.vue';
 import Dropdown from '../components/Dropdown.vue';
 import LinkGroup from '../components/LinkGroup.vue';
+import ProductList from '../components/ProductList.vue';
 
 export default {
   name: 'DashboardPage',
-  components: { Button, Icon, Dropdown, LinkGroup },
+  components: { Button, Icon, Dropdown, LinkGroup, ProductList },
 };
 </script>
 
