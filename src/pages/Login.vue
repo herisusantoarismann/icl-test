@@ -6,16 +6,16 @@
       <img class="mx-auto w-48" src="../assets/logo.png" alt="logo" />
       <h4 class="text-xl font-semibold mt-1 pb-1">Login</h4>
     </div>
-    <form>
-      <Input name="Email" type="email" />
-      <Input name="Password" type="password" />
+    <div>
+      <Input title="Email" type="email" v-model:modelValue="email" />
+      <Input title="Password" type="password" v-model:modelValue="password" />
       <div class="text-center pt-1 pb-1">
-        <Button text="Login" :block="true" />
+        <Button text="Login" :block="true" @click="login()" />
       </div>
       <p class="mt-4 text-sm text-center">
         Don`t have an account? Register here.
       </p>
-    </form>
+    </div>
   </div>
 </template>
 
@@ -26,6 +26,17 @@ import Button from '../components/Button.vue';
 export default {
   name: 'LoginPage',
   components: { Input, Button },
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    login() {
+      console.log(this.email, this.password);
+    },
+  },
 };
 </script>
 

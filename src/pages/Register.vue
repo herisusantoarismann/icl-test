@@ -7,9 +7,9 @@
       <h4 class="text-xl font-semibold mt-1 pb-1">Register</h4>
     </div>
     <form>
-      <Input name="Email" type="email" />
-      <Input name="Password" type="password" />
-      <Input name="Password Confirmation" type="password" />
+      <Input title="Email" type="email" />
+      <Input title="Password" type="password" />
+      <Input title="Password Confirmation" type="password" />
       <div class="text-center pt-1 pb-1">
         <Button text="Register" :block="true" />
       </div>
