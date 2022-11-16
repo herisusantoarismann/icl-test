@@ -45,13 +45,14 @@ export default {
       let color = '';
       switch (variant) {
         case 'light':
-          color = 'bg-white text-[#4BB543]';
+          color = 'bg-white text-[#4BB543] hover:text-white hover:bg-[#4BB543]';
           break;
         case 'outline':
-          color = 'bg-transparent text-white border border-white';
+          color =
+            'bg-transparent text-white border border-white hover:text-[#4BB543] hover:border-[#4BB543]';
           break;
         default:
-          color = 'text-white bg-[#4BB543]';
+          color = 'text-white bg-[#4BB543] hover:bg-[#419a3b]';
           break;
       }
 
